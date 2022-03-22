@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Nav from "./components/Nav.jsx";
+
+import Router from "./components/Router.jsx";
+
+import { useLocation } from "react-router-dom";
 
 function App() {
+  const [dartTheme, setDarkTheme] = useState(false);
+  const location = useLocation();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={dartTheme ? "dark" : ""}>
+      <div className="bg-gray-100 dark:bg-gray-900 dark:text-gray-200 min-h-screen overflow-x-hidden">
+        <Nav dartTheme={dartTheme} setDarkTheme={setDarkTheme} />
+        <Router />
+      </div>
     </div>
   );
 }
