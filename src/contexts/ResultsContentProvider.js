@@ -7,7 +7,6 @@ export const ResultContextProvider = ({ children }) => {
   let [count, setcount] = React.useState(0);
   const [isLoading, setisLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState("google");
-  console.log("county", count);
   //videos, /search..
   const getResults = async (type) => {
     setisLoading(true);
@@ -23,7 +22,6 @@ export const ResultContextProvider = ({ children }) => {
 
     setResults(data);
     setcount(data.queries.nextPage[0].count - 10);
-    console.log(data);
     setisLoading(false);
   };
   return (
