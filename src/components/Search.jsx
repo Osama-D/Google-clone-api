@@ -3,10 +3,9 @@ import { useDebounce } from "use-debounce";
 import { useResultContext } from "../contexts/ResultsContentProvider";
 import { GoSearch } from "react-icons/go";
 import { useHistory } from "react-router-dom";
-import { Router } from "react-router-dom/cjs/react-router-dom.min";
 
 function Search() {
-  const [text, setText] = useState("Elon Musk");
+  const [text, setText] = useState("osama daimallah");
   const { setSearchTerm } = useResultContext();
   const [debouncedValue] = useDebounce(text, 300);
   let history = useHistory();
