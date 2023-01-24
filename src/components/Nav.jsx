@@ -11,7 +11,7 @@ function Nav({ dartTheme, setDarkTheme }) {
   const { results, isLoading, getResults, searchTerm } = useResultContext();
 
   return (
-    <div className="py-6   font-body dark:bg-gray-900 bg-blue-600 flex flex-wrap tall:pt-20  items-center border-b dark:border-gray-700 border-gray-200">
+    <div className="py-6 font-body dark:bg-gray-900 bg-blue-600 flex flex-wrap tall:pt-20  items-center border-b dark:border-gray-700 border-gray-200">
       <div className="flex justify-between   tall:justify-evenly items-center  w-screen">
         <Link
           className="flex items-center tall:absolute  tall:top-5 tall:left-0  justify-center "
@@ -60,8 +60,8 @@ c0 1246 -1 1292 -42 1497 -173 886 -892 1607 -1781 1784 -194 39 -443 55 -622
             </svg>
           </span>
           <img
-            className="rounded-full ml-8 object-cover	w-12 h-12"
-            src={img}
+            className="rounded-full ml-8	w-12 h-12 object-cover"
+            src="https://avatars.githubusercontent.com/u/99812352?s=400&u=47a89b982690053a8b0f8110d1ab97da5bfefef5&v=4"
             alt="img"
           />
         </Link>
@@ -90,20 +90,25 @@ items-center          shadow-full
           {dartTheme ? (
             <BsFillMoonFill className="text-[18px] transition ease-in-out delay-1500" />
           ) : (
-            <TiAdjustBrightness className="  transition ease-in-out delay-1500	  text-blue-600 " />
+            <TiAdjustBrightness className="transition ease-in-out delay-1500	  text-blue-600 " />
           )}
         </button>
       </div>
 
-      <div className="text-white mt-12 tall:mt-8 ned:block  relative flex justify-center w-full">
-        <div className="ml-16 ned:ml-0 ned:flex ned:justify-center ned:m-0">
+      <div className="text-white mt-12 tall:mt-8 w-full flex justify-between ned:flex-col-reverse items-start">
+        <div className="pl-12 ned:px-6 tall:text-[14px] text-[16px] w-1/3 ned:w-full flex justify-start gap-x-4 items-center ned:mt-12">
+          <div>
+            <MdVerified className="w-6 h-6" />
+          </div>
+          <div>
+            We dug up {results.searchInformation?.formattedTotalResults} Results
+            ({results.searchInformation?.formattedSearchTime} Seconds)
+          </div>
+        </div>
+        <div className="w-1/3 text-center flex justify-center items-center m-auto">
           <Linkss />
         </div>
-        <div className=" absolute ned:relative ned:pr-32 ned:pt-10 left-10 flex items-center">
-          <MdVerified className="  mx-4 w-6  h-6" />
-          We dug up {results.searchInformation?.formattedTotalResults} Results (
-          {results.searchInformation?.formattedSearchTime} Seconds)
-        </div>
+        <div className="w-1/3"></div>
       </div>
     </div>
   );

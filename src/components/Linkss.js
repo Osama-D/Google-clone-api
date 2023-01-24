@@ -20,7 +20,7 @@ function Linkss() {
           key={index}
           to={url}
           activeClassName="text-white px-8 border-b-2 "
-          className="py-4 px-4"
+          className="tall:text-[14px] text-[16px] py-4 tall:px-[12px] px-4"
         >
           {text}
         </NavLink>

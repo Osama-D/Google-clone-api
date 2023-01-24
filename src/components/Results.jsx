@@ -29,17 +29,14 @@ function Results() {
           {results?.items?.map(({ link, title, snippet, pagemap }, index) => (
             <div
               key={index}
-              className=" p-12 items-center flex justify-start my-0 mx-auto flex-wrap dark:bg-gray-800  bg-white rounded-lg shadow "
+              className="tall:p-6 p-12 items-center flex justify-start my-0 mx-auto flex-wrap dark:bg-gray-800  bg-white rounded-lg shadow "
             >
               <a href={link} target="_blank" rel="noreferrer">
-                <p className="text-[25px]  inline-block items-center font-body hover:underline dark:text-blue-500 text-blue-700">
-                  <BsCircle
-                    className=" inline-block dark:text-blue-500  x items-start justify-start w-4 h-4 mr-4
-                    "
-                  />
+                <p className="tall:text-[18px] text-[25px]  inline-block items-center font-body hover:underline dark:text-blue-500 text-blue-700">
+                  <BsCircle className=" inline-block dark:text-blue-500  x items-start justify-start w-4 h-4 mr-4" />
                   {title}
                 </p>
-                <p className="text-lg flex justify-start font-body mt-4 dark:text-gray-300  text-gray-800">
+                <p className="tall:text-[14px] text-[16px] flex justify-start font-body mt-4 dark:text-gray-300  text-gray-800">
                   {snippet}
                   <img src={pagemap?.cse_image?.src} alt="" />
                 </p>
@@ -59,14 +56,14 @@ function Results() {
               className=" p-12 items-center flex justify-start my-0 mx-auto flex-wrap dark:bg-gray-800  bg-white rounded-lg shadow "
             >
               <a href={link} target="_blank" rel="noreferrer">
-                <p className="text-[25px]  inline-block items-center font-body hover:underline dark:text-blue-500 text-blue-700">
+                <p className="tall:text-[18px] text-[25px] inline-block items-center font-body hover:underline dark:text-blue-500 text-blue-700">
                   <BsCircle
                     className=" inline-block dark:text-blue-500  x items-start justify-start w-4 h-4 mr-4
                     "
                   />
                   {title}
                 </p>
-                <p className="text-lg flex justify-start font-body mt-4 dark:text-gray-300  text-gray-800">
+                <p className="tall:text-[14px] text-[16px] flex justify-start font-body mt-4 dark:text-gray-300  text-gray-800">
                   {snippet}
                   <img src={pagemap?.cse_image?.src} alt="" />
                 </p>
